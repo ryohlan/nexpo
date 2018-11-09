@@ -6,3 +6,4 @@ npm-debug.*
 *.key
 *.mobileprovision
 .next
+.DS_Store

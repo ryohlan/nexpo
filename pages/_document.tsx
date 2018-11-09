@@ -5,11 +5,14 @@ import Document, {
   NextScript,
   NextDocumentContext
 } from "next/document";
+import { AppRegistry } from "react-native-web";
 
-export default class MyDocument extends Document {
+export default class MyDocument extends Document<any> {
   static async getInitialProps(ctx: NextDocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    AppRegistry.registerComponent("Main", () => Main);
+    const style = AppRegistry.getApplication("Main").getStyleElement();
+    return { ...initialProps, style };
   }
 
   render() {
@@ -27,7 +30,7 @@ export default class MyDocument extends Document {
             href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
             rel="stylesheet"
           />
-          <link />
+          {this.props.style}
         </Head>
         <body>
           <Main />

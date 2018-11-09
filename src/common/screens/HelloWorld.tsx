@@ -1,9 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { View, Text, TouchableOpacity } from "react-native";
 
 export const HelloWorld = () => (
   <Wrapper>
     <HelloWorldText />
+    <LoginButton />
   </Wrapper>
 );
 
@@ -26,4 +27,22 @@ const HelloWorldText = (props: any) => (
   >
     HelloWorld
   </Text>
+);
+
+const LoginButton = (props: any) => (
+  <TouchableOpacity
+    {...props}
+    style={{
+      backgroundColor: "#333",
+      paddingVertical: 12,
+      paddingHorizontal: 16,
+      width: 200,
+      borderRadius: 4,
+      marginTop: 20
+    }}
+  >
+    <Text style={{ fontWeight: "bold", color: "#FFF", fontSize: 18 }}>
+      LOGIN
+    </Text>
+  </TouchableOpacity>
 );
