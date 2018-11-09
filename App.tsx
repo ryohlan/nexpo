@@ -1,6 +1,6 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
-import { HelloWorld } from "./HelloWorld";
+import { HelloWorld } from "src/common/screens/HelloWorld";
 
 export default class App extends React.Component {
   render() {
