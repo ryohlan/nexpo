@@ -1,18 +1,18 @@
-import React from "react";
+import React from 'react'
 import Document, {
   Head,
   Main,
   NextScript,
   NextDocumentContext
-} from "next/document";
-import { AppRegistry } from "react-native-web";
+} from 'next/document'
+import { AppRegistry } from 'react-native-web'
 
 export default class MyDocument extends Document<any> {
   static async getInitialProps(ctx: NextDocumentContext) {
-    const initialProps = await Document.getInitialProps(ctx);
-    AppRegistry.registerComponent("Main", () => Main);
-    const style = AppRegistry.getApplication("Main").getStyleElement();
-    return { ...initialProps, style };
+    const initialProps = await Document.getInitialProps(ctx)
+    AppRegistry.registerComponent('Main', () => Main)
+    const style = AppRegistry.getApplication('Main').getStyleElement()
+    return { ...initialProps, style }
   }
 
   render() {
@@ -37,6 +37,6 @@ export default class MyDocument extends Document<any> {
           <NextScript />
         </body>
       </html>
-    );
+    )
   }
 }

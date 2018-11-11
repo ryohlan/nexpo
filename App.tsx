@@ -1,22 +1,22 @@
-import React from "react";
-import { StyleSheet, View } from "react-native";
-import { HelloWorld } from "src/common/screens/HelloWorld";
+import React from 'react'
+import { StyleSheet, View } from 'react-native'
+import { SingUp } from 'src/common/screens/SignUp'
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <HelloWorld />
+        <SingUp />
       </View>
-    );
+    )
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center'
   }
-});
+})

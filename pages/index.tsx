@@ -1,3 +1,3 @@
-import { HelloWorld } from "src/common/screens/HelloWorld";
+import { SingUp } from 'src/common/screens/SignUp'
 
-export default HelloWorld;
+export default SingUp

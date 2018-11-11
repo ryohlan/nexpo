@@ -7,3 +7,4 @@ npm-debug.*
 *.mobileprovision
 .next
 .DS_Store
+.vscode/
